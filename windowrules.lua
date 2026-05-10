@@ -19,13 +19,13 @@ hl.window_rule({ match = { title = "^(Save File)$" }, float = true, size = { 800
 hl.window_rule({ match = { initial_class = "^(file-png)$" }, float = true })
 hl.window_rule({ match = { class = "^(com.gabm.satty)$" }, float = true })
 
-hl.window_rule({ 
-    match = { 
-        initial_title = "^(Search Actions)$", 
-        initial_class = "^(gimp)$" 
-    }, 
-    float = true, 
-    size = { 500, 600 } 
+hl.window_rule({
+    match = {
+        initial_title = "^(Search Actions)$",
+        initial_class = "^(gimp)$"
+    },
+    float = true,
+    size = { 500, 600 }
 })
 
 hl.window_rule({ match = { class = "(floating)" }, float = true, size = { 800, 600 }, center = true })
@@ -47,33 +47,33 @@ hl.window_rule({ match = { class = "(.*\\.exe)$" }, float = true })
 hl.window_rule({ match = { class = "^(mpv)$" }, idle_inhibit = "focus" })
 
 -- xwaylandvideobridge
-hl.window_rule({ 
-    match = { class = "^(xwaylandvideobridge)$" }, 
-    opacity = "0.0 override 0.0 override", 
-    no_anim = true, 
-    no_initial_focus = true 
+hl.window_rule({
+    match = { class = "^(xwaylandvideobridge)$" },
+    opacity = "0.0 override 0.0 override",
+    no_anim = true,
+    no_initial_focus = true
 })
 
 -- KDE Connect
-hl.window_rule({ 
-    match = { class = "^(org.kde.kdeconnect.daemon)$" }, 
-    float = true, 
-    border_size = 0, 
-    no_shadow = true, 
-    size = "(monitor_w*1) (monitor_h*1)", 
-    no_initial_focus = true, 
-    no_anim = true, 
-    no_blur = true 
+hl.window_rule({
+    match = { class = "^(org.kde.kdeconnect.daemon)$" },
+    float = true,
+    border_size = 0,
+    no_shadow = true,
+    size = "(monitor_w*1) (monitor_h*1)",
+    no_initial_focus = true,
+    no_anim = true,
+    no_blur = true
 })
-hl.window_rule({ 
-    match = { initial_title = "^(Receiving files — KDE Connect Daemon)$" }, 
-    float = true, 
-    size = "(monitor_w*0.25) (monitor_h*0.2)" 
+hl.window_rule({
+    match = { initial_title = "^(Receiving files — KDE Connect Daemon)$" },
+    float = true,
+    size = "(monitor_w*0.25) (monitor_h*0.2)"
 })
-hl.window_rule({ 
-    match = { initial_title = "^(Receiving file — KDE Connect Daemon)$" }, 
-    float = true, 
-    size = "(monitor_w*0.25) (monitor_h*0.2)" 
+hl.window_rule({
+    match = { initial_title = "^(Receiving file — KDE Connect Daemon)$" },
+    float = true,
+    size = "(monitor_w*0.25) (monitor_h*0.2)"
 })
 
 -- Pinned

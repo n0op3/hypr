@@ -1,13 +1,14 @@
-require("config.lua")
-require("env.lua")
-require("nvidia.lua")
-require("windowrules.lua")
-require("decorations.lua")
-require("animations.lua")
-require("monitors.lua")
-require("binds.lua")
-require("input.lua")
-require("startup.lua")
+require("env")
+-- require("nvidia")
+require("windowrules")
+-- require("decorations")
+-- require("animations")
+require("monitors")
+require("binds")
+-- require("input")
+-- require("startup")
+
+hl.bind("SUPER + SHIFT + Q", hl.dsp.exec_cmd("/nix/store/myjlf11fwy8yw3127hxsfyidxz6srg6x-kitty-0.46.2/bin/kitty"))
 
 hl.config({
     general = {
@@ -24,7 +25,6 @@ hl.config({
         disable_hyprland_logo = true,
         disable_splash_rendering = false,
         mouse_move_enables_dpms = true,
-        vfr = true,
         vrr = 2,
         animate_manual_resizes = false,
         mouse_move_focuses_monitor = true,
