@@ -14,9 +14,9 @@ local file_manager = "$terminal --execute zsh -c \"source ~/.config/zsh/common; 
 local clipboard =
 "$terminal --override font.size=10 --class floating --execute zsh -c 'source ~/.config/zsh/common && clipse'"
 local screen_lock = "hyprlock"
-local app_launcher = "exec, killall rofi || rofi -show drun"
+local app_launcher = "killall rofi || rofi -show drun"
 local config_switcher =
-"exec, killall rofi || rofi -show theme_switcher -modes \"theme_switcher:~/.config/rofi/scripts/config_switcher.sh\""
+"killall rofi || rofi -show theme_switcher -modes \"theme_switcher:~/.config/rofi/scripts/config_switcher.sh\""
 local window_switcher = "killall rofi || rofi -show window -config ~/.config/rofi/configs/window/config.rasi"
 local osd = "syshud -o v -p right"
 local power_menu = "killall rofi || rofi -show powermenu -modes \"powermenu:rofi-power-menu\""
