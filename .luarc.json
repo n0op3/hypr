@@ -1,0 +1,11 @@
+{
+  "workspace": {
+    "library": [
+      "/usr/share/hypr/stubs",
+      "~/.local/share/hyprland/stubs"
+    ]
+  },
+  "diagnostics": {
+    "globals": ["hl"]
+  }
+}
