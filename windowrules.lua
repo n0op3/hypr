@@ -77,41 +77,41 @@ hl.window_rule({
 })
 
 -- Pinned
-hl.window_rule({ match = { pin = true }, opacity = "100% 100%" })
+hl.window_rule({ match = { pin = true }, opacity = 1 })
 
 -- Layer rules
 hl.layer_rule({
     name = "swaync_slide",
-    namespace = "swaync-control-center",
+    match = { namespace = "swaync-control-center" },
     animation = "slide right"
 })
 
 hl.layer_rule({
     name = "screenshot_fix",
-    namespace = "hyprpicker",
+    match = { namespace = "hyprpicker" },
     no_anim = true
 })
 
 hl.layer_rule({
     name = "screenshot_fix",
-    namespace = "selection",
+    match = { namespace = "selection" },
     no_anim = true
 })
 
 hl.layer_rule({
     name = "swww-animation",
-    namespace = "swww-daemon",
+    match = { namespace = "swww-daemon" },
     animation = "fadein"
 })
 
 hl.layer_rule({
     name = "waybar-animation",
-    namespace = "waybar",
+    match = { namespace = "waybar" },
     animation = "slide top"
 })
 
 hl.layer_rule({
     name = "hyprshutdown-animation",
-    namespace = "hyprshutdown",
+    match = { namespace = "hyprshutdown" },
     animation = "fadein"
 })
