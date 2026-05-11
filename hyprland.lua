@@ -6,7 +6,7 @@ require("windowrules")
 require("animations")
 require("monitors")
 require("binds")
--- require("input")
+require("input")
 
 hl.config({
     general = {

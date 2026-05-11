@@ -8,10 +8,8 @@ hl.config({
         repeat_delay = 300,
         accel_profile = "flat",
         natural_scroll = false,
+        touchpad = {
+            natural_scroll = true
+        }
     },
-
-    device = {
-        name = "elan0001:00-04f3:3186-touchpad",
-        natural_scroll = true,
-    }
 })
