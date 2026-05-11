@@ -1,3 +1,12 @@
+package.path = package.path .. ";" .. os.getenv("HOME") .. "/.cache/wal/colors.lua"
+
+local ok, pywal = pcall(require, "colors")
+
+if not ok then
+    hl.exec_cmd("notify-send Hyprland 'Loading pywal colors failed'")
+    pywal = { color6 = "#ffffff", color4 = "#7C0204" }
+end
+
 hl.config({
     general = {
         gaps_in = 2,
@@ -5,9 +14,9 @@ hl.config({
         resize_on_border = true,
         border_size = 2,
         col = {
-            active_border = { colors = { "#96201E", "#2C0834" } },
+            active_border = { colors = { pywal.color6, pywal.color4 } },
             inactive_border = "rgba(00000000)"
-        },
+        }
     },
 
     decoration = {
