@@ -1,6 +1,5 @@
 require("env")
 require("startup")
--- require("nvidia")
 require("windowrules")
 require("decorations")
 require("animations")
