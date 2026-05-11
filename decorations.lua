@@ -1,5 +1,3 @@
-local color2 = rgb(000000)
-
 hl.config({
     general = {
         gaps_in = 2,
@@ -7,8 +5,8 @@ hl.config({
         resize_on_border = true,
         border_size = 2,
         col = {
-            active_border = { colors = { color6, color5 } },
-            inactive_border = rgba(00000000)
+            active_border = { colors = { "#96201E", "#2C0834" } },
+            inactive_border = "rgba(00000000)"
         },
     },
 
@@ -28,7 +26,6 @@ hl.config({
 
         shadow = {
             enabled = false,
-            ignore_window = true,
             offset = { 0, 0 },
             range = 10,
             render_power = 5,
