@@ -82,38 +82,16 @@ hl.bind("SUPER + C", hl.dsp.window.center())
 -- Workspaces
 hl.bind("SUPER + R", hl.dsp.workspace.swap_monitors({ monitor1 = 0, monitor2 = 1 }))
 
-hl.bind("SUPER + 1", hl.dsp.focus({ workspace = "1" }))
-hl.bind("SUPER + 2", hl.dsp.focus({ workspace = "2" }))
-hl.bind("SUPER + 3", hl.dsp.focus({ workspace = "3" }))
-hl.bind("SUPER + 4", hl.dsp.focus({ workspace = "4" }))
-hl.bind("SUPER + 5", hl.dsp.focus({ workspace = "5" }))
-hl.bind("SUPER + 6", hl.dsp.focus({ workspace = "6" }))
-hl.bind("SUPER + 7", hl.dsp.focus({ workspace = "7" }))
-hl.bind("SUPER + 8", hl.dsp.focus({ workspace = "8" }))
-hl.bind("SUPER + 9", hl.dsp.focus({ workspace = "9" }))
-hl.bind("SUPER + 0", hl.dsp.focus({ workspace = "10" }))
+for i = 1, 10 do
+    local bind = i
+    if i == 10 then
+        bind = 0
+    end
 
-hl.bind("SUPER + SHIFT + 1", hl.dsp.window.move({ workspace = "1" }))
-hl.bind("SUPER + SHIFT + 2", hl.dsp.window.move({ workspace = "2" }))
-hl.bind("SUPER + SHIFT + 3", hl.dsp.window.move({ workspace = "3" }))
-hl.bind("SUPER + SHIFT + 4", hl.dsp.window.move({ workspace = "4" }))
-hl.bind("SUPER + SHIFT + 5", hl.dsp.window.move({ workspace = "5" }))
-hl.bind("SUPER + SHIFT + 6", hl.dsp.window.move({ workspace = "6" }))
-hl.bind("SUPER + SHIFT + 7", hl.dsp.window.move({ workspace = "7" }))
-hl.bind("SUPER + SHIFT + 8", hl.dsp.window.move({ workspace = "8" }))
-hl.bind("SUPER + SHIFT + 9", hl.dsp.window.move({ workspace = "9" }))
-hl.bind("SUPER + SHIFT + 0", hl.dsp.window.move({ workspace = "10" }))
-
-hl.bind("SUPER + ALT + 1", hl.dsp.window.move({ workspace = "1", follow = false }))
-hl.bind("SUPER + ALT + 2", hl.dsp.window.move({ workspace = "2", follow = false }))
-hl.bind("SUPER + ALT + 3", hl.dsp.window.move({ workspace = "3", follow = false }))
-hl.bind("SUPER + ALT + 4", hl.dsp.window.move({ workspace = "4", follow = false }))
-hl.bind("SUPER + ALT + 5", hl.dsp.window.move({ workspace = "5", follow = false }))
-hl.bind("SUPER + ALT + 6", hl.dsp.window.move({ workspace = "6", follow = false }))
-hl.bind("SUPER + ALT + 7", hl.dsp.window.move({ workspace = "7", follow = false }))
-hl.bind("SUPER + ALT + 8", hl.dsp.window.move({ workspace = "8", follow = false }))
-hl.bind("SUPER + ALT + 9", hl.dsp.window.move({ workspace = "9", follow = false }))
-hl.bind("SUPER + ALT + 0", hl.dsp.window.move({ workspace = "10", follow = false }))
+    hl.bind("SUPER + " .. bind, hl.dsp.focus({ workspace = i }))
+    hl.bind("SUPER + SHIFT + " .. bind, hl.dsp.window.move({ workspace = i }))
+    hl.bind("SUPER + ALT + " .. bind, hl.dsp.window.move({ workspace = i, follow = false }))
+end
 
 hl.bind("SUPER + P", function()
     hl.dsp.window.pin()
