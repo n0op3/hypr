@@ -69,10 +69,10 @@ hl.bind("SUPER + SHIFT + K", hl.dsp.window.move({ direction = "u" }))
 hl.bind("SUPER + SHIFT + J", hl.dsp.window.move({ direction = "d" }))
 
 -- Resize
-hl.bind("SUPER + CTRL + H", hl.dsp.window.resize({ x = -20, y = 0 }))
-hl.bind("SUPER + CTRL + L", hl.dsp.window.resize({ x = 20, y = 0 }))
-hl.bind("SUPER + CTRL + K", hl.dsp.window.resize({ x = 0, y = -20 }))
-hl.bind("SUPER + CTRL + J", hl.dsp.window.resize({ x = 0, y = 20 }))
+hl.bind("SUPER + CTRL + H", hl.dsp.window.resize({ x = -20, y = 0, relative = true }))
+hl.bind("SUPER + CTRL + L", hl.dsp.window.resize({ x = 20, y = 0, relative = true }))
+hl.bind("SUPER + CTRL + K", hl.dsp.window.resize({ x = 0, y = -20, relative = true }))
+hl.bind("SUPER + CTRL + J", hl.dsp.window.resize({ x = 0, y = 20, relative = true }))
 
 -- Workspace toggles
 hl.bind("SUPER + M", hl.dsp.workspace.toggle_special("special"))
