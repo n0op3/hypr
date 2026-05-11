@@ -52,7 +52,6 @@ end)
 hl.bind("SUPER + F", hl.dsp.window.fullscreen())
 hl.bind("SUPER + SHIFT + F", hl.dsp.window.fullscreen_state({ internal = 0, client = 2 }))
 hl.bind("SUPER + V", hl.dsp.window.float({ action = "toggle" }))
-hl.bind("SUPER + P", hl.dsp.window.pseudo())
 hl.bind("SUPER + S", hl.dsp.layout("togglesplit"))
 hl.bind("SUPER + ALT + S", hl.dsp.layout("swapsplit"))
 
@@ -94,11 +93,11 @@ for i = 1, 10 do
 end
 
 hl.bind("SUPER + P", function()
-    hl.dsp.window.pin()
+    hl.dispatch(hl.dsp.window.pin())
     if hl.get_active_window().pinned then
-        hl.dsp.exec_cmd("notify-send Window pinned")
+        hl.exec_cmd("notify-send Window pinned")
     else
-        hl.dsp.exec_cmd("notify-send Window unpinned")
+        hl.exec_cmd("notify-send Window unpinned")
     end
 end)
 
