@@ -22,7 +22,7 @@ hl.bind("SUPER + SHIFT + E", hl.dsp.exec_cmd(cfg.emoji_picker))
 hl.bind("SUPER + PERIOD", hl.dsp.exec_cmd(cfg.symbol_picker))
 hl.bind("SUPER + B", hl.dsp.exec_cmd(cfg.status_bar))
 hl.bind("SUPER + ALT + N",
-    hl.dsp.exec_cmd(cfg.terminal .. "--class=floating --execute zsh -c \"source ~/.config/zsh/common; russ read\""))
+    hl.dsp.exec_cmd(cfg.terminal .. " --class=floating --execute zsh -c \"source ~/.config/zsh/common; russ read\""))
 hl.bind("CTRL + SUPER + V", hl.dsp.exec_cmd(cfg.clipboard))
 hl.bind("SUPER + N", hl.dsp.exec_cmd(cfg.notification_center))
 hl.bind("SUPER + F9", hl.dsp.exec_cmd("~/.config/hypr/scripts/toggle_dnd.sh"))
