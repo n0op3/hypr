@@ -1,4 +1,5 @@
 require("env")
+require("startup")
 -- require("nvidia")
 require("windowrules")
 -- require("decorations")
@@ -6,9 +7,6 @@ require("windowrules")
 require("monitors")
 require("binds")
 -- require("input")
--- require("startup")
-
-hl.bind("SUPER + SHIFT + Q", hl.dsp.exec_cmd("/nix/store/myjlf11fwy8yw3127hxsfyidxz6srg6x-kitty-0.46.2/bin/kitty"))
 
 hl.config({
     general = {

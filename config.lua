@@ -1,7 +1,7 @@
 return {
     mod_key = "SUPER",
     mod_key2 = "ALT",
-    scripts_dir = "~/.config/hypr/scripts",
+    scripts_dir = os.getenv("HOME") .. "/.config/hypr/scripts",
     notify = "notify-send -h string:x-canonical-private-synchronous:hypr-cfg -u low",
     notification_daemon = "swaync",
     notification_center = "swaync-client -sw -t",
