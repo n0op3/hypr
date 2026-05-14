@@ -32,13 +32,5 @@ hl.config({
             xray = false,
             ignore_opacity = true,
         },
-
-        shadow = {
-            enabled = false,
-            offset = { 0, 0 },
-            range = 10,
-            render_power = 5,
-            color = 0x88404040,
-        }
     }
 })

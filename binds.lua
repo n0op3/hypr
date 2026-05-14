@@ -1,3 +1,5 @@
+require("powersave")
+
 local cfg = require("config")
 
 -- Sharing
@@ -7,7 +9,7 @@ hl.bind("SUPER + ALT + SHIFT + S", hl.dsp.exec_cmd(cfg.screenshot_edit))
 
 -- Misc
 hl.bind("SUPER + ALT + R", hl.dsp.exec_cmd("hyprctl reload"))
-hl.bind("SUPER + ALT + P", hl.dsp.exec_cmd("~/.config/hypr/scripts/powersave.sh"))
+hl.bind("SUPER + ALT + P", function() Toggle_powersave() end)
 hl.bind("SUPER + SHIFT + X", hl.dsp.exec_cmd("hyprpicker | tr -d '\n' | wl-copy"))
 hl.bind("SUPER + ALT + SEMICOLON", hl.dsp.exec_cmd(cfg.screen_lock))
 hl.bind("SUPER + SHIFT + SEMICOLON", hl.dsp.exec_cmd(cfg.power_menu))

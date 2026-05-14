@@ -1,3 +1,5 @@
+Settings = { powersave = false };
+
 require("env")
 require("startup")
 require("windowrules")
