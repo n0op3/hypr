@@ -26,7 +26,6 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("blueman-applet")
     hl.exec_cmd("bluetooth off")
     hl.exec_cmd(cfg.osd)
-    hl.exec_cmd("rm ~/.cache/hyprland-powersave")
 
     -- Messengers
     hl.exec_cmd("signal-desktop --start-in-tray")
