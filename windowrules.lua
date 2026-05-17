@@ -18,6 +18,7 @@ hl.window_rule({ match = { title = "^(File Operation Progress)$" }, float = true
 hl.window_rule({ match = { title = "^(Save File)$" }, float = true, size = { 800, 600 } })
 hl.window_rule({ match = { initial_class = "^(file-png)$" }, float = true })
 hl.window_rule({ match = { class = "^(com.gabm.satty)$" }, float = true })
+hl.window_rule({ match = { class = "^(com.saivert.pwvucontrol)$" }, float = true })
 
 hl.window_rule({
     match = {
