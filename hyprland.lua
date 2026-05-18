@@ -8,6 +8,7 @@ require("animations")
 require("monitors")
 require("binds")
 require("input")
+require("nvidia")
 
 hl.config({
     general = {
@@ -18,7 +19,6 @@ hl.config({
         inactive_timeout = 0.1,
         hide_on_key_press = true,
         sync_gsettings_theme = true,
-        no_hardware_cursors = false,
     },
     misc = {
         disable_hyprland_logo = true,
