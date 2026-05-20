@@ -19,6 +19,7 @@ local float_matches = {
     { title = "^(Picture-in-Picture)$" },
     { title = "^(Media viewer)$" },
     { class = "^(org.kde.polkit-kde-authentication-agent-1)$" },
+    { title = "^(Select what to share)$" },
     {
         initial_title = "^(Search Actions)$",
         initial_class = "^(gimp)$"
