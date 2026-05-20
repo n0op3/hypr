@@ -1,43 +1,34 @@
 -- Float
-hl.window_rule({ match = { class = "^(org.kde.polkit-kde-authentication-agent-1)$" }, float = true })
-hl.window_rule({ match = { class = "^(pavucontrol)$" }, float = true })
-hl.window_rule({ match = { title = "^(iwgtk)$" }, float = true })
-hl.window_rule({ match = { title = "^(Media viewer)$" }, float = true })
-hl.window_rule({ match = { title = "^(Picture-in-Picture)$" }, float = true })
-hl.window_rule({ match = { class = "^(file_progress)$" }, float = true })
-hl.window_rule({ match = { class = "^(confirm)$" }, float = true })
-hl.window_rule({ match = { class = "^(dialog)$" }, float = true })
-hl.window_rule({ match = { class = "^(download)$" }, float = true, size = { 800, 600 } })
-hl.window_rule({ match = { class = "^(notification)$" }, float = true })
-hl.window_rule({ match = { class = "^(error)$" }, float = true })
-hl.window_rule({ match = { class = "^(confirmreset)$" }, float = true })
-hl.window_rule({ match = { title = "^(Open File)$" }, float = true, size = { 800, 600 } })
-hl.window_rule({ match = { title = "^(branchdialog)$" }, float = true })
-hl.window_rule({ match = { title = "^(Confirm to replace files)$" }, float = true })
-hl.window_rule({ match = { title = "^(File Operation Progress)$" }, float = true })
-hl.window_rule({ match = { title = "^(Save File)$" }, float = true, size = { 800, 600 } })
-hl.window_rule({ match = { class = "^(xdg-desktop-portal-gtk)$" }, float = true, center = true, size = { 800, 600 } })
-hl.window_rule({ match = { initial_class = "^(file-png)$" }, float = true })
-hl.window_rule({ match = { class = "^(com.gabm.satty)$" }, float = true })
-hl.window_rule({ match = { class = "^(com.saivert.pwvucontrol)$" }, float = true })
-
-hl.window_rule({
-    match = {
+local float_matches = {
+    { class = "^(floating)$" },
+    { class = "^(com.saivert.pwvucontrol)$" },
+    { class = "^(com.gabm.satty)$" },
+    { class = "^(xdg-desktop-portal-gtk)$" },
+    { title = "^(Save File)$" },
+    { title = "^(File Operation Progress)$" },
+    { title = "^(Confirm to replace files)$" },
+    { title = "^(branchdialog)$" },
+    { title = "^(Open File)$" },
+    { class = "^(confirmreset)$" },
+    { class = "^(error)$" },
+    { class = "^(notification)$" },
+    { class = "^(download)$" },
+    { class = "^(dialog)$" },
+    { class = "^(confirm)$" },
+    { class = "^(file_progress)$" },
+    { title = "^(Picture-in-Picture)$" },
+    { title = "^(Media viewer)$" },
+    { class = "^(org.kde.polkit-kde-authentication-agent-1)$" },
+    {
         initial_title = "^(Search Actions)$",
         initial_class = "^(gimp)$"
-    },
-    float = true,
-    size = { 500, 600 }
-})
+    }
+}
 
-hl.window_rule({ match = { class = "(floating)" }, float = true, size = { 800, 600 }, center = true })
-hl.window_rule({ match = { class = "(floating)" }, animation = "popin", size = { 800, 600 }, center = true })
+for _, rule in ipairs(float_matches) do
+    hl.window_rule({ match = rule, float = true, center = true, size = { 800, 600 } })
+end
 
--- Size
-hl.window_rule({ match = { title = "^(Volume Control)$" }, size = { 800, 600 } })
-hl.window_rule({ match = { class = "^(sidebar)$" }, size = { 400, 1080 } })
-hl.window_rule({ match = { class = "^(blender)$" }, size = { 1000, 900 } })
-hl.window_rule({ match = { class = "^(blender)$" }, center = true })
 hl.window_rule({ match = { class = "(fullscreen)" }, fullscreen = true })
 
 -- Wine
@@ -45,8 +36,6 @@ hl.window_rule({ match = { class = "^(explorer.exe)$", title = "^()$" }, size = 
 hl.window_rule({ match = { class = "^(explorer.exe)$", title = "^()$" }, rounding = 0 })
 hl.window_rule({ match = { class = "^(explorer.exe)$", title = "^()$" }, move = "monitor_w-20 0" })
 hl.window_rule({ match = { class = "(.*\\.exe)$" }, float = true })
-
-hl.window_rule({ match = { class = "^(mpv)$" }, idle_inhibit = "focus" })
 
 -- xwaylandvideobridge
 hl.window_rule({
