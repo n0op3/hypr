@@ -95,11 +95,16 @@ for i = 1, 10 do
 end
 
 hl.bind("SUPER + P", function()
+    if not hl.get_active_window().floating then
+        Notify("Cannot pin a non-floating window");
+        return
+    end
+
     hl.dispatch(hl.dsp.window.pin())
     if hl.get_active_window().pinned then
-        hl.exec_cmd("notify-send Window pinned")
+        Notify("Window pinned")
     else
-        hl.exec_cmd("notify-send Window unpinned")
+        Notify("Window unpinned")
     end
 end)
 
