@@ -1,5 +1,6 @@
 hl.env("XDG_SESSION_TYPE", "wayland")
 hl.env("GBM_BACKEND", "nvidia-drm")
+hl.env("LIBVA_DRIVER_NAME", "nvidia")
 hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
 hl.env("NVD_BACKEND", " direct")
 
@@ -8,6 +9,6 @@ hl.config({
         direct_scanout = 2,
     },
     cursor = {
-        no_hardware_cursors = 1,
+        no_hardware_cursors = 0,
     }
 })
