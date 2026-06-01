@@ -29,7 +29,8 @@ hl.bind("CTRL + SUPER + V", hl.dsp.exec_cmd(cfg.clipboard))
 hl.bind("SUPER + N", hl.dsp.exec_cmd(cfg.notification_center))
 hl.bind("SUPER + F9", hl.dsp.exec_cmd("~/.config/hypr/scripts/toggle_dnd.sh"))
 hl.bind("SUPER + F10",
-    hl.dsp.exec_cmd("(killall hypridle && notify 'Toggled Hypridle off') || (notify 'Toggled Hypridle on' && hypridle)"))
+    hl.dsp.exec_cmd(
+        "(killall hypridle && notify-send 'Toggled Hypridle off') || (notify-send 'Toggled Hypridle on' && hypridle)"))
 hl.bind("SUPER + F11", hl.dsp.exec_cmd("~/.scripts/toggle_pywal.sh"))
 hl.bind("SUPER + XF86Tools", hl.dsp.exec_cmd(cfg.toggle_bluelight_filter))
 
