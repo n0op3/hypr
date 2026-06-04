@@ -4,8 +4,7 @@ function Notify(message)
 end
 
 function Update_rounding()
-    os.execute("mkdir -p ~/.cache/rofi")
-    local rofi_rounding, err = io.open(os.getenv("HOME") .. "/.cache/rofi/rounding.rasi", "w")
+    local rofi_rounding, err = io.open(os.getenv("HOME") .. "/.cache/rofi-rounding.rasi", "w")
 
     if not rofi_rounding then
         error(err)
@@ -13,4 +12,15 @@ function Update_rounding()
 
     rofi_rounding:write("window { border-radius: " .. State.rounding .. "px; }")
     rofi_rounding:close()
+
+    local swaync_rounding, err = io.open(os.getenv("HOME") .. "/.cache/swaync-rounding.css", "w")
+
+    if not swaync_rounding then
+        error(err)
+    end
+
+    swaync_rounding:write("* { border-radius: " .. State.rounding .. "px; }")
+    swaync_rounding:close()
+
+    hl.exec_cmd("swaync-client --reload-css")
 end
