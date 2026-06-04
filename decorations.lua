@@ -20,7 +20,7 @@ hl.config({
     },
 
     decoration = {
-        rounding = 12,
+        rounding = State.rounding,
         active_opacity = 0.95,
         inactive_opacity = 0.85,
 

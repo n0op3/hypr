@@ -1,3 +1,5 @@
+require("utils")
+
 local cfg = require("config")
 
 hl.on("hyprland.start", function()

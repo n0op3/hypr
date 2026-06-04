@@ -1,10 +1,12 @@
 require("utils")
 
 function Toggle_powersave()
-    Settings.powersave = not Settings.powersave
+    State.powersave = not State.powersave
 
-    if Settings.powersave then
+    if State.powersave then
+        State.rounding = 0
         hl.config({
+            general = { gaps_in = 0, gaps_out = 0 },
             animations = { enabled = false },
             decoration = { rounding = 0, blur = { enabled = false, } }
         })
@@ -12,5 +14,6 @@ function Toggle_powersave()
         hl.exec_cmd("hyprctl reload")
     end
 
-    Notify("Toggled powersave " .. tostring((Settings.powersave and "on") or "off"))
+    Notify("Toggled powersave " .. tostring((State.powersave and "on") or "off"))
+    Update_rounding()
 end
