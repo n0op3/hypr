@@ -3,7 +3,7 @@ require("utils")
 local cfg = require("config")
 
 hl.on("hyprland.start", function()
-    -- NOTE: VERY IMPORTANT! Without this, no env vars will be set.
+    -- WARNING: VERY IMPORTANT! Without this, no env vars will be set.
     hl.exec_cmd("dbus-update-activation-environment --all --systemd")
 
     -- Misc
