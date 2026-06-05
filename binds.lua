@@ -8,7 +8,10 @@ hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd(cfg.screenshot_area))
 hl.bind("SUPER + ALT + SHIFT + S", hl.dsp.exec_cmd(cfg.screenshot_edit))
 
 -- Misc
-hl.bind("SUPER + ALT + R", hl.dsp.exec_cmd("hyprctl reload"))
+hl.bind("SUPER + ALT + R", function()
+    hl.dsp.exec_cmd("hyprctl reload")
+    Notify("Config reloaded")
+end)
 hl.bind("SUPER + ALT + P", function() Toggle_powersave() end)
 hl.bind("SUPER + SHIFT + X", hl.dsp.exec_cmd("hyprpicker | tr -d '\n' | wl-copy"))
 hl.bind("SUPER + ALT + SEMICOLON", hl.dsp.exec_cmd(cfg.screen_lock))
