@@ -81,12 +81,6 @@ hl.layer_rule({
 
 hl.layer_rule({
     name = "screenshot_fix",
-    match = { namespace = "hyprpicker" },
-    no_anim = true
-})
-
-hl.layer_rule({
-    name = "screenshot_fix",
     match = { namespace = "selection|hyprpicker" },
     no_anim = true
 })
