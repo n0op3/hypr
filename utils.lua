@@ -19,7 +19,9 @@ function Update_rounding()
         error(err)
     end
 
-    swaync_rounding:write("* { border-radius: " .. State.rounding .. "px; }")
+    swaync_rounding:write("* { border-radius: " ..
+        State.rounding .. "px; transition: " .. tostring((State.powersave and 0) or
+            200) .. "ms; }")
     swaync_rounding:close()
 
     hl.exec_cmd("swaync-client --reload-css")
