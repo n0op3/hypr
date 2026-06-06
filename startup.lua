@@ -29,6 +29,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("bluetooth off")
     hl.exec_cmd(cfg.osd)
     hl.exec_cmd("sleep 2; aw-qt")
+    hl.exec_cmd("sleep 2; awatcher")
 
     -- Messengers
     hl.exec_cmd("signal-desktop --start-in-tray")
