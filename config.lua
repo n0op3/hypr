@@ -9,6 +9,14 @@ local notify = "notify-send -h string:x-canonical-private-synchronous:hypr-cfg -
 local terminal = "kitty"
 local bluelight_filter = "hyprsunset"
 
+function grimblast(args)
+    hl.config({ cursor = { no_hardware_cursors = 0 } })
+    hl.exec_cmd("grimblast " .. args)
+    hl.timer(function()
+        hl.config({ cursor = { no_hardware_cursors = 1 } })
+    end, { timeout = 1500, type = "oneshot" })
+end
+
 return {
     mod_key = mod_key,
     mod_key2 = mod_key2,
@@ -20,8 +28,12 @@ return {
     browser = "zen-beta",
     volume = scripts_dir .. "/volume",
     screenshot_edit = "wl-paste | satty --filename - --early-exit",
-    screenshot_area = "grimblast --freeze copy area",
-    screenshot_full = "grimblast -c --freeze copy screen",
+    screenshot_area = function()
+        grimblast("--freeze copy area")
+    end,
+    screenshot_full = function()
+        grimblast("-c --freeze copy screen")
+    end,
     file_manager =
         terminal .. " --execute zsh -c \"source ~/.config/zsh/common; yazi\"",
     clipboard =

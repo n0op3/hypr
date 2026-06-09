@@ -3,8 +3,8 @@ require("powersave")
 local cfg = require("config")
 
 -- Sharing
-hl.bind("Print", hl.dsp.exec_cmd(cfg.screenshot_full))
-hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd(cfg.screenshot_area))
+hl.bind("Print", cfg.screenshot_full)
+hl.bind("SUPER + SHIFT + S", cfg.screenshot_area)
 hl.bind("SUPER + ALT + SHIFT + S", hl.dsp.exec_cmd(cfg.screenshot_edit))
 
 -- Misc
