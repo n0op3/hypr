@@ -86,6 +86,12 @@ hl.layer_rule({
 })
 
 hl.layer_rule({
+    name = "rofi_no_anim",
+    match = { namespace = "rofi" },
+    no_anim = true
+})
+
+hl.layer_rule({
     name = "swww-animation",
     match = { namespace = "swww-daemon" },
     animation = "fadein"
