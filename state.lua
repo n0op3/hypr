@@ -6,5 +6,5 @@ hl.on("config.reloaded", function()
 end)
 
 function Update_state()
-    State = { powersave = false, rounding = 8 }
+    State = { simple_mode = false, rounding = 8 }
 end
