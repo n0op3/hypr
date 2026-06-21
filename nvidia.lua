@@ -8,7 +8,4 @@ hl.config({
     render = {
         direct_scanout = 2,
     },
-    cursor = {
-        no_hardware_cursors = 1,
-    }
 })

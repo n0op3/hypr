@@ -11,7 +11,9 @@ local bluelight_filter = "hyprsunset"
 
 function grimblast(args)
     hl.config({ cursor = { no_hardware_cursors = 0 } })
-    hl.exec_cmd("grimblast " .. args)
+    hl.timer(function()
+        hl.exec_cmd("grimblast " .. args)
+    end, { timeout = 200, type = "oneshot" })
     hl.timer(function()
         hl.config({ cursor = { no_hardware_cursors = 1 } })
     end, { timeout = 1500, type = "oneshot" })
