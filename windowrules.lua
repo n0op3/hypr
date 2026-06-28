@@ -92,8 +92,8 @@ hl.layer_rule({
 })
 
 hl.layer_rule({
-    name = "swww-animation",
-    match = { namespace = "swww-daemon" },
+    name = "awww-animation",
+    match = { namespace = "awww-daemon" },
     animation = "fadein"
 })
 
