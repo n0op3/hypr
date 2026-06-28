@@ -8,7 +8,12 @@ function Toggle_simple_mode()
         hl.config({
             general = { gaps_in = 0, gaps_out = 0 },
             animations = { enabled = false },
-            decoration = { rounding = 0, blur = { enabled = false, } }
+            decoration = {
+                rounding = 0,
+                blur = { enabled = false, },
+                active_opacity = 0.95,
+                inactive_opacity = 0.9
+            }
         })
     else
         hl.exec_cmd("hyprctl reload")
