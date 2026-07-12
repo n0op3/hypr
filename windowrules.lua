@@ -28,7 +28,7 @@ local float_matches = {
 }
 
 for _, rule in ipairs(float_matches) do
-    hl.window_rule({ match = rule, float = true, center = true, size = { 800, 600 } })
+    hl.window_rule({ match = rule, float = true, center = true, size = { 820, 600 } })
 end
 
 hl.window_rule({ match = { class = "(fullscreen)" }, fullscreen = true })
