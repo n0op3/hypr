@@ -35,4 +35,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("signal-desktop --start-in-tray")
     hl.exec_cmd("sleep 2; vesktop --start-minimized")
     hl.exec_cmd("thunderbird")
+
+    -- Popups
+    Terminal("tuxedo ~/Documents/notes/todo.txt")
 end)

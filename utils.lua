@@ -26,3 +26,9 @@ function Update_rounding()
 
     hl.exec_cmd("swaync-client --reload-css")
 end
+
+function Terminal(command, class)
+    command = command or "$SHELL"
+    class = class or "kitty"
+    hl.exec_cmd("kitty --class " .. class .. " --execute zsh -c \"source ~/.config/zsh/common; " .. command .. "\"")
+end

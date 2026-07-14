@@ -1,3 +1,5 @@
+require("utils")
+
 local home = os.getenv("HOME")
 
 local mod_key = "SUPER"
@@ -6,7 +8,6 @@ local mod_key2 = "ALT"
 local scripts_dir = home .. "/.config/hypr/scripts"
 
 local notify = "notify-send -h string:x-canonical-private-synchronous:hypr-cfg -u low"
-local terminal = "kitty"
 local bluelight_filter = "hyprsunset"
 
 function grimblast(args)
@@ -26,7 +27,6 @@ return {
     notify = notify,
     notification_daemon = "swaync",
     notification_center = "swaync-client -sw -t",
-    terminal = terminal,
     browser = "zen-beta",
     volume = scripts_dir .. "/volume",
     screenshot_edit = "wl-paste | satty --filename - --early-exit",
@@ -36,11 +36,13 @@ return {
     screenshot_full = function()
         grimblast("-c --freeze copy screen")
     end,
-    file_manager =
-        terminal .. " --execute zsh -c \"source ~/.config/zsh/common; yazi\"",
+    file_manager = function()
+        Terminal("yazi")
+    end,
     clipboard =
-        terminal
-        .. " --override font.size=10 --class floating --execute zsh -c 'source ~/.config/zsh/common && clipse'",
+        function()
+            Terminal("clipse", "floating")
+        end,
     screen_lock = "hyprlock",
     app_launcher = "killall rofi || rofi -show drun",
     config_switcher =
