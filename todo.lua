@@ -6,7 +6,7 @@ function Todo(skip_check)
         if Read_command_output("pidof tuxedo") then
             os.execute("killall tuxedo")
         else
-            Terminal("tuxedo " .. todolist, "floating")
+            Terminal("tuxedo " .. todolist, "floating-big")
         end
     end
 end
