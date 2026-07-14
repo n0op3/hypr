@@ -1,4 +1,5 @@
 require("simple_mode")
+require("todo")
 
 local cfg = require("config")
 
@@ -18,6 +19,9 @@ hl.bind("SUPER + ALT + SEMICOLON", hl.dsp.exec_cmd(cfg.screen_lock))
 hl.bind("SUPER + SHIFT + SEMICOLON", hl.dsp.exec_cmd(cfg.power_menu))
 hl.bind("SUPER + RETURN", function()
     Terminal()
+end)
+hl.bind("SUPER + T", function()
+    Todo(true)
 end)
 hl.bind("SUPER + E", cfg.file_manager)
 hl.bind("SUPER + W", hl.dsp.exec_cmd(cfg.browser))

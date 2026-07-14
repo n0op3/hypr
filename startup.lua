@@ -1,4 +1,5 @@
 require("utils")
+require("todo")
 
 local cfg = require("config")
 
@@ -37,5 +38,5 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("thunderbird")
 
     -- Popups
-    Terminal("tuxedo ~/Documents/notes/todo.txt")
+    Todo()
 end)

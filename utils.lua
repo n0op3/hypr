@@ -32,3 +32,27 @@ function Terminal(command, class)
     class = class or "kitty"
     hl.exec_cmd("kitty --class " .. class .. " --execute zsh -c \"source ~/.config/zsh/common; " .. command .. "\"")
 end
+
+function File_empty(path)
+    local file = io.open(path, "rb")
+    if not file then
+        return true
+    end
+
+    local size = file:seek("end")
+    file:close()
+
+    return size == 0
+end
+
+function Read_command_output(command)
+    local cmd = io.popen(command)
+
+    if cmd == nil then
+        return nil
+    end
+
+    local out = cmd:read("*l")
+    cmd:close()
+    return out
+end
