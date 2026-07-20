@@ -1,6 +1,6 @@
 function Notify(message)
-    hl.exec_cmd("notify-send -h string:x-canonical-private-synchronous:hypr-cfg -u low Hyprland '" ..
-        tostring(message) .. "'")
+    hl.exec_cmd("notify-send -h string:x-canonical-private-synchronous:hypr-cfg -u low Hyprland '" .. tostring(message)
+        .. "'")
 end
 
 function Update_rounding()
@@ -19,9 +19,9 @@ function Update_rounding()
         error(err)
     end
 
-    swaync_rounding:write("* { border-radius: " ..
-        State.rounding .. "px; transition: " .. tostring((State.simple and 0) or
-            200) .. "ms; }")
+    swaync_rounding:write("* { border-radius: " .. State.rounding
+        .. "px; transition: " .. tostring((State.simple and 0) or 200)
+        .. "ms; }")
     swaync_rounding:close()
 
     hl.exec_cmd("swaync-client --reload-css")
@@ -55,4 +55,14 @@ function Read_command_output(command)
     local out = cmd:read("*l")
     cmd:close()
     return out
+end
+
+function Shutdown()
+    hl.timer(function()
+        hl.dispatch(hl.dsp.dpms({ action = "disable" }))
+    end, { timeout = 50, type = "oneshot" })
+    hl.exec_cmd("hyprshutdown")
+    hl.timer(function()
+        hl.dispatch(hl.dsp.exit())
+    end, { timeout = 2000, type = "oneshot" })
 end
