@@ -13,7 +13,9 @@ hl.bind("SUPER + ALT + R", function()
     hl.dsp.exec_cmd("hyprctl reload")
     Notify("Config reloaded")
 end)
-hl.bind("SUPER + ALT + P", function() Toggle_simple_mode() end)
+hl.bind("SUPER + ALT + P", function()
+    Toggle_simple_mode()
+end)
 hl.bind("SUPER + SHIFT + X", hl.dsp.exec_cmd("hyprpicker | tr -d '\n' | wl-copy"))
 hl.bind("SUPER + ALT + SEMICOLON", hl.dsp.exec_cmd(cfg.screen_lock))
 hl.bind("SUPER + SHIFT + SEMICOLON", hl.dsp.exec_cmd(cfg.power_menu))
@@ -32,20 +34,25 @@ hl.bind("SUPER + TAB", hl.dsp.window.cycle_next())
 hl.bind("SUPER + SHIFT + E", hl.dsp.exec_cmd(cfg.emoji_picker))
 hl.bind("SUPER + PERIOD", hl.dsp.exec_cmd(cfg.symbol_picker))
 hl.bind("SUPER + B", hl.dsp.exec_cmd(cfg.status_bar))
-hl.bind("SUPER + ALT + N",
-    function()
-        Terminal("russ read", "floating")
-    end)
+hl.bind("SUPER + ALT + N", function()
+    Terminal("russ read", "floating")
+end)
 hl.bind("CTRL + SUPER + V", cfg.clipboard)
 hl.bind("SUPER + N", hl.dsp.exec_cmd(cfg.notification_center))
 hl.bind("SUPER + F9", hl.dsp.exec_cmd("~/.config/hypr/scripts/toggle_dnd.sh"))
-hl.bind("SUPER + F10",
+hl.bind(
+    "SUPER + F10",
     hl.dsp.exec_cmd(
-        "(killall hypridle && notify-send 'Toggled Hypridle off') || (notify-send 'Toggled Hypridle on' && hypridle)"))
+        "(killall hypridle && notify-send 'Toggled Hypridle off') || (notify-send 'Toggled Hypridle on' && hypridle)"
+    )
+)
 hl.bind("SUPER + F11", hl.dsp.exec_cmd("~/.scripts/toggle_pywal.sh"))
-hl.bind("SUPER + F12",
+hl.bind(
+    "SUPER + F12",
     hl.dsp.exec_cmd(
-        "systemctl is-active --quiet keyd.service && (systemctl stop keyd.service; notify-send keyd stopped) || (systemctl start keyd.service; notify-send keyd started)"))
+        "systemctl is-active --quiet keyd.service && (systemctl stop keyd.service; notify-send keyd stopped) || (systemctl start keyd.service; notify-send keyd started)"
+    )
+)
 hl.bind("SUPER + XF86Tools", hl.dsp.exec_cmd(cfg.toggle_bluelight_filter))
 
 -- Wallpaper keybinds
@@ -111,7 +118,7 @@ end
 
 hl.bind("SUPER + P", function()
     if not hl.get_active_window().floating then
-        Notify("Cannot pin a non-floating window");
+        Notify("Cannot pin a non-floating window")
         return
     end
 
