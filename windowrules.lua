@@ -31,6 +31,7 @@ for _, rule in ipairs(float_matches) do
     hl.window_rule({ match = rule, float = true, center = true, size = { 820, 600 } })
 end
 hl.window_rule({ match = { class = "^(floating-big)$" }, float = true, center = true, size = { 980, 700 } })
+hl.window_rule({ match = { class = "^(floating|floating-big)$" }, animation = "popin" })
 
 hl.window_rule({ match = { class = "(fullscreen)" }, fullscreen = true })
 

@@ -21,9 +21,10 @@ hl.env("SDL_IM_MODULE", "fcitx")
 hl.env("XMODIFIERS", "@im=fcitx")
 
 hl.env("wallpapers_path", home .. "/Pictures/Wallpapers")
-hl.env("PATH",
-    home ..
-    "/.scripts:" ..
-    path .. ":" .. home .. "/.local/bin:" .. home .. "/.cargo/bin:" .. home .. "/Apps:" .. home .. "/.deno/bin")
+hl.env(
+    "PATH",
+    home .. "/.scripts:" .. home .. "/.local/bin:" .. home .. "/.cargo/bin:" .. path .. ":" .. home .. "/Apps:" .. home
+    .. "/.deno/bin"
+)
 hl.env("EDITOR", cfg.editor)
 hl.env("CMAKE_BUILD_PARALLEL_LEVEL", "8")
