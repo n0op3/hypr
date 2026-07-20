@@ -3,7 +3,7 @@ hl.config({
         kb_layout = "pl",
         follow_mouse = 1,
         sensitivity = 0,
-        force_no_accel = 1,
+        force_no_accel = true,
         repeat_rate = 25,
         repeat_delay = 300,
         accel_profile = "flat",
@@ -11,5 +11,5 @@ hl.config({
         touchpad = {
             natural_scroll = true
         }
-    },
+    }
 })
