@@ -10,13 +10,13 @@ hl.curve("linear", { type = "bezier", points = { { 1, 1 }, { 1, 1 } } })
 hl.curve("snappy", { type = "bezier", points = { { 0.5, 0.35 }, { 0.9, 0.85 } } })
 
 -- Workspaces
-hl.animation({ leaf = "workspaces", enabled = true, speed = 0.8, bezier = "snappy", style = "slidevert" })
+hl.animation({ leaf = "workspaces", enabled = true, speed = 0.7, bezier = "snappy", style = "slidevert" })
 
 -- Windows
 hl.animation({ leaf = "fadeIn", enabled = false })
 hl.animation({ leaf = "fadeOut", enabled = false })
-hl.animation({ leaf = "windowsIn", enabled = true, speed = 0.8, bezier = "snappy", style = "slide" })
-hl.animation({ leaf = "windowsOut", enabled = true, speed = 1.4, bezier = "snappy", style = "slide" })
+hl.animation({ leaf = "windowsIn", enabled = true, speed = 0.95, bezier = "snappy", style = "slide" })
+hl.animation({ leaf = "windowsOut", enabled = true, speed = 1.2, bezier = "snappy", style = "slide" })
 hl.animation({ leaf = "windowsMove", enabled = true, speed = 0.9, bezier = "snappy", style = "slide" })
 
 hl.animation({ leaf = "layersIn", enabled = true, speed = 1, bezier = "quick", style = "popin" })
