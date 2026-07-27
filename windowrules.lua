@@ -88,11 +88,12 @@ hl.layer_rule({
     no_anim = true
 })
 
-hl.layer_rule({
-    name = "rofi_no_anim",
-    match = { namespace = "rofi" },
-    no_anim = true
-})
+-- NOTE: This will be commented on or off depending on which rofi config I'm using
+-- hl.layer_rule({
+--     name = "rofi_no_anim",
+--     match = { namespace = "rofi" },
+--     no_anim = true
+-- })
 
 hl.layer_rule({
     name = "awww-animation",
