@@ -40,6 +40,8 @@ return {
     app_launcher = "killall rofi || rofi -show drun",
     config_switcher =
     "killall rofi || rofi -show theme_switcher -modes \"theme_switcher:~/.config/rofi/scripts/config_switcher.sh\"",
+    pywal_switcher =
+    "killall rofi || rofi -show theme_switcher -modes \"theme_switcher:~/.config/rofi/scripts/theme_switcher.sh\"",
     window_switcher = "killall rofi || rofi -show window -config ~/.config/rofi/configs/window/config.rasi",
     osd = "syshud -o v -p right",
     power_menu = "killall rofi || rofi -show powermenu -modes \"powermenu:rofi-power-menu\"",
