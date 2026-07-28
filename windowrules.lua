@@ -50,6 +50,12 @@ hl.window_rule({
     no_initial_focus = true
 })
 
+-- wine tray icons
+hl.window_rule({
+    match = { class = "^(xembedsniproxy)$" },
+    opacity = "0.0 override 0.0 override"
+})
+
 -- KDE Connect
 hl.window_rule({
     match = { class = "^(org.kde.kdeconnect.daemon)$" },
