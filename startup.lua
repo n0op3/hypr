@@ -29,7 +29,10 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("fcitx5")
     hl.exec_cmd("libinput-gestures")
     hl.exec_cmd("wpctl set-volume -l 1.0")
-    hl.exec_cmd("pywalfox start")
+    hl.exec_cmd(
+        "pywalfox install --manifest-path ~/.mozilla/native-messaging-hosts \
+                 --profile-path  ~/.config/librewolf/librewolf; pywalfox start"
+    )
     hl.exec_cmd("blueman-applet")
     hl.exec_cmd("bluetooth off")
     hl.exec_cmd("sleep 2; aw-qt")

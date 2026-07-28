@@ -11,13 +11,7 @@ local notify = "notify-send -h string:x-canonical-private-synchronous:hypr-cfg -
 local bluelight_filter = "hyprsunset"
 
 function grimblast(args)
-    hl.config({ cursor = { no_hardware_cursors = 0 } })
-    hl.timer(function()
-        hl.exec_cmd("grimblast " .. args)
-    end, { timeout = 200, type = "oneshot" })
-    hl.timer(function()
-        hl.config({ cursor = { no_hardware_cursors = 1 } })
-    end, { timeout = 1500, type = "oneshot" })
+    hl.exec_cmd("grimblast " .. args)
 end
 
 return {
@@ -39,35 +33,25 @@ return {
     file_manager = function()
         Terminal("yazi")
     end,
-    clipboard =
-        function()
-            Terminal("clipse", "floating")
-        end,
+    clipboard = function()
+        Terminal("clipse", "floating")
+    end,
     screen_lock = "hyprlock",
     app_launcher = "killall rofi || rofi -show drun",
     config_switcher =
     "killall rofi || rofi -show theme_switcher -modes \"theme_switcher:~/.config/rofi/scripts/config_switcher.sh\"",
-    window_switcher =
-    "killall rofi || rofi -show window -config ~/.config/rofi/configs/window/config.rasi",
+    window_switcher = "killall rofi || rofi -show window -config ~/.config/rofi/configs/window/config.rasi",
     osd = "syshud -o v -p right",
-    power_menu =
-    "killall rofi || rofi -show powermenu -modes \"powermenu:rofi-power-menu\"",
-    emoji_picker =
-    "killall rofi || rofi -show emoji -display-emoji \"Pick an emoji\"",
-    symbol_picker =
-    "killall rofi || unipicker --command \"rofi -dmenu\" | wl-copy -n",
+    power_menu = "killall rofi || rofi -show powermenu -modes \"powermenu:rofi-power-menu\"",
+    emoji_picker = "killall rofi || rofi -show emoji -display-emoji \"Pick an emoji\"",
+    symbol_picker = "killall rofi || unipicker --command \"rofi -dmenu\" | wl-copy -n",
     status_bar = "pkill .waybar-wrapped || waybar",
     polkit_agent = "systemctl --user start hyprpolkitagent",
     editor = "nvim",
     bluelight_filter = bluelight_filter,
-    toggle_bluelight_filter =
-        "(killall "
-        .. bluelight_filter
-        .. " && "
-        .. notify
-        .. " Bluelight off) || ("
-        .. notify
-        .. " Bluelight on && "
-        .. bluelight_filter
-        .. ")",
+    toggle_bluelight_filter = "(killall " .. bluelight_filter
+        .. " && " .. notify
+        .. " Bluelight off) || (" .. notify
+        .. " Bluelight on && " .. bluelight_filter
+        .. ")"
 }
