@@ -36,6 +36,12 @@ hl.window_rule({ match = { class = "^(floating-big)$" }, float = true, center = 
 
 hl.window_rule({ match = { class = "(fullscreen)" }, fullscreen = true })
 
+-- DaVinci Resolve
+hl.window_rule({
+    match = { class = "^(resolve)$" },
+    opacity = "1.0 override 1.0 override"
+})
+
 -- Wine
 hl.window_rule({ match = { class = "^(explorer.exe)$", title = "^()$" }, size = { 20, 20 } })
 hl.window_rule({ match = { class = "^(explorer.exe)$", title = "^()$" }, rounding = 0 })
