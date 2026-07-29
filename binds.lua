@@ -111,6 +111,7 @@ end)
 hl.bind("SUPER + F", hl.dsp.window.fullscreen())
 hl.bind("SUPER + SHIFT + F", hl.dsp.window.fullscreen_state({ internal = 0, client = 2 }))
 hl.bind("SUPER + V", hl.dsp.window.float({ action = "toggle" }))
+hl.bind("SUPER + SHIFT + F", hl.dsp.window.fullscreen_state({ internal = 0, client = 2 }))
 hl.bind("ALT + TAB", hl.dsp.exec_cmd(cfg.window_switcher))
 hl.bind(
     "SUPER + S",
