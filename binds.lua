@@ -31,8 +31,7 @@ hl.bind("SUPER + W", hl.dsp.exec_cmd(cfg.browser))
 hl.bind("SUPER + SPACE", hl.dsp.exec_cmd(cfg.app_launcher))
 hl.bind("SUPER + SHIFT + SPACE", hl.dsp.exec_cmd(cfg.config_switcher))
 hl.bind("SUPER + SHIFT + P", hl.dsp.exec_cmd(cfg.pywal_switcher))
-hl.bind("ALT + TAB", hl.dsp.exec_cmd(cfg.window_switcher))
-hl.bind("SUPER + TAB", hl.dsp.window.cycle_next())
+hl.bind("SUPER + SHIFT + U", hl.dsp.exec_cmd(cfg.layout_switcher))
 hl.bind("SUPER + SHIFT + E", hl.dsp.exec_cmd(cfg.emoji_picker))
 hl.bind("SUPER + PERIOD", hl.dsp.exec_cmd(cfg.symbol_picker))
 hl.bind("SUPER + B", hl.dsp.exec_cmd(cfg.status_bar))
@@ -62,18 +61,6 @@ hl.bind("SUPER + F5", hl.dsp.exec_cmd("~/.scripts/random_wallpaper.sh"))
 hl.bind("SUPER + F6", hl.dsp.exec_cmd("~/.scripts/random_wallpaper_from_pic.re.sh"))
 hl.bind("SUPER + F7", hl.dsp.exec_cmd("~/.scripts/toggle_wallpaper.sh"))
 hl.bind("SUPER + F8", hl.dsp.exec_cmd("~/.scripts/save_wallpaper.sh"))
-
--- Window keybinds
-hl.bind("SUPER + Q", hl.dsp.window.close())
-hl.bind("ALT + F4", hl.dsp.window.kill())
-hl.bind("SUPER + SHIFT + Q", function()
-    Shutdown()
-end)
-hl.bind("SUPER + F", hl.dsp.window.fullscreen())
-hl.bind("SUPER + SHIFT + F", hl.dsp.window.fullscreen_state({ internal = 0, client = 2 }))
-hl.bind("SUPER + V", hl.dsp.window.float({ action = "toggle" }))
-hl.bind("SUPER + S", hl.dsp.layout("togglesplit"))
-hl.bind("SUPER + ALT + S", hl.dsp.layout("swapsplit"))
 
 -- Focus
 hl.bind("SUPER + H", hl.dsp.focus({ direction = "l" }))
@@ -112,6 +99,38 @@ for i = 1, 10 do
     hl.bind("SUPER + ALT + " .. bind, hl.dsp.window.move({ workspace = i, follow = false }))
 end
 
+-- Windows
+hl.bind("SUPER + Q", hl.dsp.window.close())
+hl.bind("ALT + F4", hl.dsp.window.kill())
+hl.bind("SUPER + SHIFT + Q", function()
+    Shutdown()
+end)
+hl.bind("SUPER + F", hl.dsp.window.fullscreen())
+hl.bind("SUPER + SHIFT + F", hl.dsp.window.fullscreen_state({ internal = 0, client = 2 }))
+hl.bind("SUPER + V", hl.dsp.window.float({ action = "toggle" }))
+hl.bind("ALT + TAB", hl.dsp.exec_cmd(cfg.window_switcher))
+hl.bind(
+    "SUPER + S",
+    Layout_bind({
+        dwindle = hl.dsp.layout("togglesplit"),
+        master = hl.dsp.layout("swapwithmaster")
+    })
+)
+hl.bind(
+    "SUPER + ALT +S",
+    Layout_bind({
+        dwindle = hl.dsp.layout("swapsplit"),
+        master = hl.dsp.layout("orientationnext")
+    })
+)
+hl.bind(
+    "SUPER + TAB",
+    Layout_bind({
+        dwindle = hl.dsp.window.cycle_next(),
+        monocle = hl.dsp.layout("cyclenext"),
+        master = hl.dsp.layout("cyclenext")
+    })
+)
 hl.bind("SUPER + P", function()
     if not hl.get_active_window().floating then
         Notify("Cannot pin a non-floating window")
