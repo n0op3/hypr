@@ -68,6 +68,9 @@ hl.bind("SUPER + L", hl.dsp.focus({ direction = "r" }))
 hl.bind("SUPER + K", hl.dsp.focus({ direction = "u" }))
 hl.bind("SUPER + J", hl.dsp.focus({ direction = "d" }))
 
+hl.bind("SUPER + K", Layout_bind({ monocle = hl.dsp.layout("cycleprev") }))
+hl.bind("SUPER + J", Layout_bind({ monocle = hl.dsp.layout("cyclenext") }))
+
 -- Move
 hl.bind("SUPER + SHIFT + H", hl.dsp.window.move({ direction = "l" }))
 hl.bind("SUPER + SHIFT + L", hl.dsp.window.move({ direction = "r" }))
