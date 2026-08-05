@@ -82,3 +82,17 @@ function Layout_bind(bind_table)
         end
     end
 end
+
+local MAX_ZOOM = 3
+local MIN_ZOOM = 1
+
+function Zoom(offset)
+    local current = hl.get_config("cursor.zoom_factor")
+    if offset ~= nil then
+        current = current + offset
+    else
+        current = 1.0
+    end
+    current = math.max(MIN_ZOOM, math.min(MAX_ZOOM, current))
+    hl.config({ cursor = { zoom_factor = current } })
+end

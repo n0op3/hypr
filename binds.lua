@@ -56,6 +56,22 @@ hl.bind(
 )
 hl.bind("SUPER + XF86Tools", hl.dsp.exec_cmd(cfg.toggle_bluelight_filter))
 
+-- Zoom
+hl.bind("SUPER + Z", Zoom)
+hl.gesture({
+    fingers = 2,
+    direction = "pinch",
+    mods = "SUPER",
+    action = "cursor_zoom",
+    mode = "live"
+})
+hl.bind("SUPER + mouse_up", function()
+    Zoom(0.5)
+end)
+hl.bind("SUPER + mouse_down", function()
+    Zoom(-0.5)
+end)
+
 -- Wallpaper keybinds
 hl.bind("SUPER + F5", hl.dsp.exec_cmd("~/.scripts/random_wallpaper.sh"))
 hl.bind("SUPER + F6", hl.dsp.exec_cmd("~/.scripts/random_wallpaper_from_pic.re.sh"))

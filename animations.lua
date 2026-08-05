@@ -24,3 +24,5 @@ hl.animation({ leaf = "layersOut", enabled = true, speed = 1, bezier = "quick", 
 
 hl.animation({ leaf = "border", enabled = true, speed = 1.5, bezier = "linear" })
 hl.animation({ leaf = "borderangle", enabled = true, speed = 1, bezier = "linear", style = "once" })
+
+hl.animation({ leaf = "zoomFactor", enabled = true, speed = 1, bezier = "snappy" })
