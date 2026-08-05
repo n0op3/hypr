@@ -11,7 +11,7 @@ hl.monitor({
     mode = "preferred",
     position = "2560x360",
     scale = 1,
-    bitdepth = 10,
+    bitdepth = 10
 })
 
 hl.monitor({
