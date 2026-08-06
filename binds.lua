@@ -4,7 +4,6 @@ require("todo")
 local cfg = require("config")
 
 -- Sharing
-hl.bind("Print", cfg.screenshot_full)
 hl.bind("SUPER + SHIFT + S", cfg.screenshot_area)
 hl.bind("SUPER + ALT + SHIFT + S", hl.dsp.exec_cmd(cfg.screenshot_edit))
 

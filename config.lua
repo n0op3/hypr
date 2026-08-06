@@ -25,10 +25,7 @@ return {
     volume = scripts_dir .. "/volume",
     screenshot_edit = "wl-paste | satty --filename - --early-exit",
     screenshot_area = function()
-        grimblast("--freeze copy area")
-    end,
-    screenshot_full = function()
-        grimblast("-c --freeze copy screen")
+        hl.plugin.hyprcapture.open()
     end,
     file_manager = function()
         Terminal("yazi")

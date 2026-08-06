@@ -4,6 +4,7 @@ Update_state()
 
 require("env")
 require("startup")
+require("plugins")
 require("windowrules")
 require("decorations")
 require("animations")

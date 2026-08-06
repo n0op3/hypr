@@ -10,7 +10,7 @@ function Toggle_simple_mode()
             animations = { enabled = false },
             decoration = {
                 rounding = 0,
-                blur = { enabled = false, },
+                blur = { enabled = false },
                 active_opacity = 0.95,
                 inactive_opacity = 0.9
             }
