@@ -24,9 +24,7 @@ return {
     browser = "librewolf",
     volume = scripts_dir .. "/volume",
     screenshot_edit = "wl-paste | satty --filename - --early-exit",
-    screenshot_area = function()
-        hl.plugin.hyprcapture.open()
-    end,
+    screenshot_area = hl.plugin.hyprcapture.open,
     file_manager = function()
         Terminal("yazi")
     end,

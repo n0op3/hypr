@@ -58,7 +58,7 @@ hl.window_rule({
 
 -- wine tray icons
 hl.window_rule({
-    match = { class = "^(xembedsniproxy)$" },
+    match = { title = "^()$" },
     opacity = "0.0 override 0.0 override"
 })
 
