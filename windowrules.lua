@@ -124,3 +124,9 @@ hl.layer_rule({
     match = { namespace = "hyprshutdown" },
     animation = "fadein"
 })
+
+hl.layer_rule({
+    name = "wallpaper-picker",
+    match = { namespace = "wallpaper-picker" },
+    animation = "fadein"
+})

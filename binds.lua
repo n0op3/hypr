@@ -72,6 +72,7 @@ hl.bind("SUPER + mouse_down", function()
 end)
 
 -- Wallpaper keybinds
+hl.bind("SUPER + SHIFT + W", hl.dsp.exec_cmd("quickshell -c hyprquickpaper -n"))
 hl.bind("SUPER + F5", hl.dsp.exec_cmd("~/.scripts/random_wallpaper.sh"))
 hl.bind("SUPER + F6", hl.dsp.exec_cmd("~/.scripts/random_wallpaper_from_pic.re.sh"))
 hl.bind("SUPER + F7", hl.dsp.exec_cmd("~/.scripts/toggle_wallpaper.sh"))
