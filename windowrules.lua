@@ -42,6 +42,12 @@ hl.window_rule({
     opacity = "1.0 override 1.0 override"
 })
 
+hl.window_rule({
+    name = "steam-popup-immediate",
+    match = { class = "^(steam)$" },
+    immediate = true
+})
+
 -- Wine
 hl.window_rule({ match = { class = "^(explorer.exe)$", title = "^()$" }, size = { 20, 20 } })
 hl.window_rule({ match = { class = "^(explorer.exe)$", title = "^()$" }, rounding = 0 })

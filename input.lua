@@ -2,6 +2,7 @@ hl.config({
     input = {
         kb_layout = "pl",
         follow_mouse = 1,
+        mouse_refocus = false,
         sensitivity = 0,
         force_no_accel = true,
         repeat_rate = 25,

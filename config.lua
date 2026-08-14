@@ -25,17 +25,20 @@ return {
     volume = scripts_dir .. "/volume",
     screenshot_edit = "wl-paste | satty --filename - --early-exit",
     screenshot_area = hl.plugin.hyprcapture.open,
-    file_manager = function ()
+    file_manager = function()
         Terminal("yazi")
     end,
-    clipboard = function ()
+    clipboard = function()
         Terminal("clipse", "floating")
     end,
     screen_lock = "hyprlock",
     app_launcher = "killall rofi || rofi -show drun",
-    config_switcher = "killall rofi || rofi -show theme_switcher -modes \"theme_switcher:~/.config/rofi/scripts/config_switcher.sh\"",
-    pywal_switcher = "killall rofi || rofi -show theme_switcher -modes \"theme_switcher:~/.config/rofi/scripts/theme_switcher.sh\"",
-    layout_switcher = "killall rofi || rofi -show layout_switcher -modes \"layout_switcher:~/.config/rofi/scripts/hyprland_layout.sh\"",
+    config_switcher =
+    "killall rofi || rofi -show theme_switcher -modes \"theme_switcher:~/.config/rofi/scripts/config_switcher.sh\"",
+    pywal_switcher =
+    "killall rofi || rofi -show theme_switcher -modes \"theme_switcher:~/.config/rofi/scripts/theme_switcher.sh\"",
+    layout_switcher =
+    "killall rofi || rofi -show layout_switcher -modes \"layout_switcher:~/.config/rofi/scripts/hyprland_layout.sh\"",
     window_switcher = "killall rofi || rofi -show window -config ~/.config/rofi/configs/window/config.rasi",
     osd = "syshud -o v -p right",
     power_menu = "killall rofi || rofi -show powermenu -modes \"powermenu:rofi-power-menu\"",
