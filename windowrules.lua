@@ -36,11 +36,14 @@ hl.window_rule({ match = { class = "^(floating-big)$" }, float = true, center = 
 
 hl.window_rule({ match = { class = "(fullscreen)" }, fullscreen = true })
 
--- DaVinci Resolve
-hl.window_rule({
-    match = { class = "^(resolve)$" },
-    opacity = "1.0 override 1.0 override"
-})
+-- Full opacity
+local opacity_matches = { { class = "^(resolve)$" }, { class = "^(gimp)$" } }
+for _, match in ipairs(opacity_matches) do
+    hl.window_rule({
+        match = match,
+        opacity = "1.0 override 1.0 override"
+    })
+end
 
 hl.window_rule({
     name = "steam-popup-immediate",
