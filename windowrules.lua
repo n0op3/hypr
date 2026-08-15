@@ -37,7 +37,7 @@ hl.window_rule({ match = { class = "^(floating-big)$" }, float = true, center = 
 hl.window_rule({ match = { class = "(fullscreen)" }, fullscreen = true })
 
 -- Full opacity
-local opacity_matches = { { class = "^(resolve)$" }, { class = "^(gimp)$" } }
+local opacity_matches = { { class = "^(resolve)$" }, { class = "^(gimp)$" }, { class = "^(krita)$" } }
 for _, match in ipairs(opacity_matches) do
     hl.window_rule({
         match = match,
