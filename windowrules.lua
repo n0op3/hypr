@@ -67,8 +67,8 @@ hl.window_rule({
 
 -- wine tray icons
 hl.window_rule({
-    match = { title = "^()$" },
-    opacity = "0.0 override 0.0 override"
+    match = { class = "^$", xwayland = true },
+    workspace = "special:hidden silent"
 })
 
 -- KDE Connect
