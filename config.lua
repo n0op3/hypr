@@ -31,7 +31,7 @@ return {
     clipboard = function()
         Terminal("clipse", "floating")
     end,
-    screen_lock = "hyprlock",
+    screen_lock = "hyprlock -q",
     app_launcher = "killall rofi || rofi -show drun",
     config_switcher =
     "killall rofi || rofi -show theme_switcher -modes \"theme_switcher:~/.config/rofi/scripts/config_switcher.sh\"",
