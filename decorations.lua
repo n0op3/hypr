@@ -21,7 +21,7 @@ hl.config({
 
     decoration = {
         rounding = State.rounding,
-        active_opacity = 0.95,
+        active_opacity = 0.9,
         inactive_opacity = 0.8,
 
         blur = {
@@ -30,7 +30,7 @@ hl.config({
             passes = 2,
             new_optimizations = true,
             xray = false,
-            ignore_opacity = true,
-        },
+            ignore_opacity = true
+        }
     }
 })
