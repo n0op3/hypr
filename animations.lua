@@ -10,7 +10,7 @@ hl.curve("linear", { type = "bezier", points = { { 1, 1 }, { 1, 1 } } })
 hl.curve("snappy", { type = "bezier", points = { { 0.5, 0.35 }, { 0.9, 0.85 } } })
 
 -- Workspaces
-hl.animation({ leaf = "workspaces", enabled = true, speed = 0.7, bezier = "snappy", style = "slidevert" })
+hl.animation({ leaf = "workspaces", enabled = true, speed = 0.7, bezier = "snappy", style = "slide" })
 
 -- Windows
 hl.animation({ leaf = "fadeIn", enabled = false })
