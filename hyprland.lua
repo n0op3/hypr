@@ -22,7 +22,7 @@ hl.config({
         inactive_timeout = 0.1,
         hide_on_key_press = true,
         sync_gsettings_theme = true,
-        no_hardware_cursors = false
+        no_hardware_cursors = true
     },
     misc = {
         disable_hyprland_logo = true,
