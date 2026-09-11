@@ -193,5 +193,5 @@ hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl set 5%-"), { rep
 
 -- Discord passes
 local vesktop = { window = "class:^(vesktop)$" }
-hl.bind("CTRL + SHIFT + M", hl.dsp.pass(vesktop))
-hl.bind("CTRL + SHIFT + D", hl.dsp.pass(vesktop))
+hl.bind("CTRL + SHIFT + M", hl.dsp.pass(vesktop), { locked = true })
+hl.bind("CTRL + SHIFT + D", hl.dsp.pass(vesktop), { locked = true })
