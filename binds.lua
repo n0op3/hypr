@@ -66,10 +66,12 @@ hl.gesture({
 })
 hl.bind("SUPER + mouse_up", function()
     Zoom(0.5)
-end)
+end, { repeating = true }
+)
 hl.bind("SUPER + mouse_down", function()
     Zoom(-0.5)
-end)
+end, { repeating = true }
+)
 
 -- Wallpaper keybinds
 hl.bind("SUPER + SHIFT + W", hl.dsp.exec_cmd("quickshell -c hyprquickpaper -n"))
