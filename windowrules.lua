@@ -42,6 +42,7 @@ local opacity_matches = {
     { class = "^(resolve)$" },
     { class = "^(gimp)$" },
     { class = "^(krita)$" },
+    { class = "^(blender)$" },
     {
         class = "^(Godot)$"
     }
