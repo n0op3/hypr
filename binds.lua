@@ -54,6 +54,7 @@ hl.bind(
     )
 )
 hl.bind("SUPER + XF86Tools", hl.dsp.exec_cmd(cfg.toggle_bluelight_filter))
+hl.bind("SUPER + ALT + W", hl.dsp.exec_cmd(cfg.widgets))
 
 -- Zoom
 hl.bind("SUPER + Z", Zoom)
@@ -137,7 +138,7 @@ hl.bind(
     })
 )
 hl.bind(
-    "SUPER + ALT +S",
+    "SUPER + ALT + S",
     Layout_bind({
         dwindle = hl.dsp.layout("swapsplit"),
         master = hl.dsp.layout("orientationnext")

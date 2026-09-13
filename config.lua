@@ -40,6 +40,7 @@ return {
     layout_switcher =
     "killall rofi || rofi -show layout_switcher -modes \"layout_switcher:~/.config/rofi/scripts/hyprland_layout.sh\"",
     window_switcher = "killall rofi || rofi -show window -config ~/.config/rofi/configs/window/config.rasi",
+    widgets = "qs kill -c desktop || qs -n -c desktop",
     osd = "syshud -o v -p right",
     power_menu = "killall rofi || rofi -show powermenu -modes \"powermenu:rofi-power-menu\"",
     emoji_picker = "killall rofi || rofi -show emoji -display-emoji \"Pick an emoji\"",
