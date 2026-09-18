@@ -12,6 +12,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd(cfg.polkit_agent)
     hl.exec_cmd("echo pl > /tmp/kb_layout")
     hl.exec_cmd(cfg.bluelight_filter)
+    hl.exec_cmd(cfg.widgets)
 
     -- Daemons
     hl.exec_cmd(os.getenv("HOME") .. "/.scripts/notify_when_battery_reaches.sh 20")
