@@ -21,7 +21,7 @@ return {
     notify = notify,
     notification_daemon = "swaync",
     notification_center = "swaync-client -sw -t",
-    browser = "librewolf",
+    browser = "firefox",
     volume = scripts_dir .. "/volume",
     screenshot_edit = "wl-paste | satty --filename - --early-exit",
     screenshot_area = hl.plugin.hyprcapture.open,
