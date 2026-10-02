@@ -126,6 +126,12 @@ hl.layer_rule({
 -- })
 
 hl.layer_rule({
+    name = "hyprquickframe_no_anim",
+    match = { namespace = "hyprquickframe" },
+    no_anim = true
+})
+
+hl.layer_rule({
     name = "awww-animation",
     match = { namespace = "awww-daemon" },
     animation = "fadein"

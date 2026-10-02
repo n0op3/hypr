@@ -24,7 +24,7 @@ return {
     browser = "firefox",
     volume = scripts_dir .. "/volume",
     screenshot_edit = "wl-paste | satty --filename - --early-exit",
-    screenshot_area = hl.plugin.hyprcapture.open,
+    screenshot_area = "hyprquickframe",
     file_manager = function()
         Terminal("yazi")
     end,
