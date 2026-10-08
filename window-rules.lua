@@ -22,7 +22,7 @@ local float_matches = {
     { class = "^(org.kde.polkit-kde-authentication-agent-1)$" },
     { title = "^(Select what to share)$" },
     { class = "^(.blueman-manager-wrapped)$" },
-    { class = "^(blender)$",                                  float = true },
+    { class = "^(blender)$", float = true },
     {
         initial_title = "^(Search Actions)$",
         initial_class = "^(gimp)$"
@@ -53,6 +53,12 @@ for _, match in ipairs(opacity_matches) do
         opacity = "1.0 override 1.0 override"
     })
 end
+
+hl.window_rule({
+    name = "kitty_suppress_maximize_on_startup",
+    match = { initial_title = "^(kitty)$" },
+    suppress_event = "maximize"
+})
 
 hl.window_rule({
     name = "steam-popup-immediate",
