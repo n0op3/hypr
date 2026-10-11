@@ -22,7 +22,7 @@ local float_matches = {
     { class = "^(org.kde.polkit-kde-authentication-agent-1)$" },
     { title = "^(Select what to share)$" },
     { class = "^(.blueman-manager-wrapped)$" },
-    { class = "^(blender)$", float = true },
+    { class = "^(blender)$",                                  float = true },
     {
         initial_title = "^(Search Actions)$",
         initial_class = "^(gimp)$"
@@ -116,6 +116,12 @@ hl.layer_rule({
     name = "swaync_slide",
     match = { namespace = "swaync-control-center" },
     animation = "slide right"
+})
+
+hl.layer_rule({
+    name = "logout_menu_fade",
+    match = { namespace = "logout-menu" },
+    animation = "fadein"
 })
 
 hl.layer_rule({

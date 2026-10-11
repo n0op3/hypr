@@ -42,7 +42,7 @@ return {
     window_switcher = "killall rofi || rofi -show window -config ~/.config/rofi/configs/window/config.rasi",
     widgets = "qs kill -c desktop || qs -n -c desktop",
     osd = "qs -n -c osd",
-    power_menu = "killall rofi || rofi -show powermenu -modes \"powermenu:rofi-power-menu\"",
+    logout_menu = "qs -n -c logout",
     emoji_picker = "killall rofi || rofi -show emoji -display-emoji \"Pick an emoji\"",
     symbol_picker = "killall rofi || unipicker --command \"rofi -dmenu\" | wl-copy -n",
     status_bar = "pkill .waybar-wrapped || waybar",
