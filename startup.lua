@@ -41,7 +41,7 @@ hl.on("hyprland.start", function()
     -- Messengers
     hl.exec_cmd("signal-desktop --start-in-tray")
     hl.exec_cmd("sleep 2; vesktop --start-minimized")
-    hl.exec_cmd("thunderbird")
+    hl.exec_cmd("flatpak run com.github.vladimiry.ElectronMail")
 
     -- Popups
     Todo()
