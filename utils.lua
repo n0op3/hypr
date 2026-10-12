@@ -28,9 +28,17 @@ function Update_rounding()
 end
 
 function Terminal(command, class)
-    command = command or "$SHELL"
-    class = class or "kitty"
-    hl.exec_cmd("kitty --class " .. class .. " --execute zsh -c \"source ~/.config/zsh/common; " .. command .. "\"")
+    local cmd = "kitty"
+
+    if class and class ~= "" then
+        cmd = cmd .. " --class " .. class
+    end
+
+    if command and command ~= "" then
+        cmd = cmd .. " zsh -c \"source ~/.config/zsh/common; " .. command .. "\""
+    end
+
+    hl.exec_cmd(cmd)
 end
 
 function File_empty(path)
