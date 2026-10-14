@@ -1,5 +1,4 @@
 require("simple_mode")
-require("todo")
 
 local cfg = require("config")
 
@@ -20,9 +19,6 @@ hl.bind("SUPER + ALT + SEMICOLON", hl.dsp.exec_cmd(cfg.screen_lock))
 hl.bind("SUPER + SHIFT + SEMICOLON", hl.dsp.exec_cmd(cfg.logout_menu))
 hl.bind("SUPER + RETURN", function()
     Terminal()
-end)
-hl.bind("SUPER + T", function()
-    Todo(true)
 end)
 hl.bind("SUPER + E", cfg.file_manager)
 hl.bind("SUPER + CTRL + S", hl.dsp.exec_cmd("~/.config/hypr/scripts/anki_ss.sh"), { transparent = true })
