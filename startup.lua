@@ -42,6 +42,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("signal-desktop --start-in-tray")
     hl.exec_cmd("sleep 2; vesktop --start-minimized")
     hl.exec_cmd("flatpak run com.github.vladimiry.ElectronMail")
+    hl.exec_cmd("element-desktop --hidden")
 
     -- Popups
     Todo()
