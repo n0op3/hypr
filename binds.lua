@@ -118,6 +118,8 @@ for i = 1, 10 do
 end
 
 -- Windows
+hl.bind("SUPER + T", hl.dsp.group.toggle())
+hl.bind("SUPER + TAB", hl.dsp.group.next())
 hl.bind("SUPER + Q", hl.dsp.window.close())
 hl.bind("ALT + F4", hl.dsp.window.kill())
 hl.bind("SUPER + SHIFT + Q", function()

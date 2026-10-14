@@ -19,6 +19,28 @@ hl.config({
         }
     },
 
+    group = {
+        groupbar = {
+            keep_upper_gap = false,
+            gradients = true,     -- filled background behind the title
+            height = 20,          -- bar height, holds the text
+            indicator_height = 0, -- or 2-3 if you still want a line
+            text_offset = 0,      -- remove the hack
+            gradient_rounding = State.rounding,
+            text_color = pywal.color0,
+            text_color_inactive = pywal.foreground,
+            font_size = 12,
+            col = {
+                active = pywal.color1,
+                inactive = pywal.color0
+            }
+        },
+        col = {
+            border_active = pywal.color1,
+            border_inactive = pywal.color2
+        }
+    },
+
     decoration = {
         rounding = State.rounding,
         active_opacity = 0.85,
