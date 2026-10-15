@@ -21,7 +21,7 @@ local float_matches = {
     { title = "^(Media viewer)$" },
     { class = "^(org.kde.polkit-kde-authentication-agent-1)$" },
     { title = "^(Select what to share)$" },
-    { class = "^(.blueman-manager-wrapped)$" },
+    { class = "^(blueman-manager)$" },
     { class = "^(blender)$",                                  float = true },
     {
         initial_title = "^(Search Actions)$",
