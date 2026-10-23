@@ -13,18 +13,19 @@ function Update_rounding()
     rofi_rounding:write("window { border-radius: " .. State.rounding .. "px; }")
     rofi_rounding:close()
 
-    local swaync_rounding, err = io.open(os.getenv("HOME") .. "/.cache/swaync-rounding.css", "w")
+    local swaync_style, err = io.open(os.getenv("HOME") .. "/.cache/swaync-rounding.css", "w")
 
-    if not swaync_rounding then
+    if not swaync_style then
         error(err)
     end
 
-    swaync_rounding:write("* { border-radius: " .. State.rounding
+    swaync_style:write("* { border-radius: " .. State.rounding
         .. "px; transition: " .. tostring((State.simple and 0) or 200)
         .. "ms; }")
-    swaync_rounding:close()
+    swaync_style:close()
 
     hl.exec_cmd("swaync-client --reload-css")
+    hl.exec_cmd("swaync-client --reload-config")
 end
 
 function Terminal(command, class)
